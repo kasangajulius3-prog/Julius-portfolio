@@ -1,13 +1,8 @@
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaPhone } from "react-icons/fa";
 import portrait from "./assets/portrait.jpg";
 import "./App.css";
 
 const projects = [
-  {
-    title: "Student Study Hub",
-    description:
-      "A web application designed to help students manage their study schedules and resources.",
-  },
   {
     title: "Portfolio Website",
     description: "My personal portfolio built using React.",
@@ -16,9 +11,24 @@ const projects = [
 
 const contacts = [
   {
-    label: "kasangajulius3@gmail.com",
+    label: "Personal: kasangajulius3@gmail.com",
     href: "mailto:kasangajulius3@gmail.com",
     icon: FaEnvelope,
+  },
+  {
+    label: "Work: kasangajulius42@gmail.com",
+    href: "mailto:kasangajulius42@gmail.com",
+    icon: FaEnvelope,
+  },
+  {
+    label: "+260 571 642 568",
+    href: "tel:+260571642568",
+    icon: FaPhone,
+  },
+  {
+    label: "+260 760 381 141",
+    href: "tel:+260760381141",
+    icon: FaPhone,
   },
   {
     label: "LinkedIn",
@@ -85,9 +95,27 @@ function App() {
         <section id="about" className="section" aria-labelledby="about-title">
           <h2 id="about-title">About Me</h2>
           <p>
-            I am a Computer Science student with a strong foundation in
-            programming, problem-solving, and software engineering principles.
-            I aim to grow into a high-impact developer.
+            I'm a Computer Science student and aspiring Software Engineer based
+            in Zambia, passionate about building practical technology that
+            solves real-world problems.
+          </p>
+          <p>
+            I enjoy working across software development, web technologies,
+            cybersecurity, and systems design. I'm constantly learning by
+            building projects, participating in technical challenges, and
+            exploring how technology can make everyday processes more
+            accessible and efficient.
+          </p>
+          <p>
+            My goal is to grow into a well-rounded software engineer who can
+            design, build, and secure reliable systems. I'm particularly
+            interested in backend development, application architecture, and
+            cybersecurity.
+          </p>
+          <p>
+            When I'm not studying or coding, I'm usually experimenting with a
+            new technology, breaking something I probably shouldn't have
+            broken, and then figuring out how to fix it.
           </p>
         </section>
 
