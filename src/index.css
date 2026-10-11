@@ -103,4 +103,13 @@ a:hover {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+
+  /* Prevent content from staying invisible when animations are off */
+  [data-reveal],
+  .anim-fade-up,
+  .anim-fade-in-right,
+  .anim-slide-down {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
