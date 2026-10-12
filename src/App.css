@@ -770,6 +770,18 @@ h2[data-reveal].revealed::after {
   font-size: 0.9rem;
 }
 
+.footer-alias {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85em;
+  color: #71717a;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.footer-alias:hover {
+  color: #ffffff;
+}
+
 /* ========================================
    RESPONSIVE
    ======================================== */
