@@ -52,6 +52,21 @@ function App() {
         Skip to content
       </a>
 
+      {/* Earth in Space Interactive Background */}
+      <div className="bg-video-container" aria-hidden="true">
+        <video
+          className="bg-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={`${import.meta.env.BASE_URL}assets/earth.webm`} type="video/webm" />
+        </video>
+        <div className="bg-video-overlay" />
+        <div className="stars-layer" />
+      </div>
+
       <header className="site-header anim-slide-down">
         <nav className="nav" aria-label="Primary">
           <a className="nav-brand" href="#top">
