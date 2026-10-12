@@ -234,11 +234,26 @@ h2[data-reveal].revealed::after {
 }
 
 .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--heading);
   letter-spacing: -0.01em;
   transition: color 0.2s ease;
+}
+
+.brand-stoic-icon {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+
+.nav-brand:hover .brand-stoic-icon {
+  transform: rotate(45deg) scale(1.1);
+  color: #e4e4e7;
 }
 
 .nav-brand:hover {
@@ -484,13 +499,108 @@ h2[data-reveal].revealed::after {
   font-size: 1.05rem;
 }
 
+.quote-badge {
+  margin: 28px 0 0;
+  padding: 16px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid #ffffff;
+  border-radius: 0 12px 12px 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  max-width: 58ch;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quote-latin {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.quote-sub {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ========================================
+   TOOLS & SKILLS
+   ======================================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 16px rgba(255, 255, 255, 0.08);
+}
+
+.skill-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-card:hover .skill-icon-wrapper {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-icon {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.skill-name {
+  font-size: 1.15rem;
+  color: var(--heading);
+  margin-bottom: 8px;
+}
+
+.skill-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 /* ========================================
    PROJECTS
    ======================================== */
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -503,10 +613,66 @@ h2[data-reveal].revealed::after {
   padding: 26px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition:
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.3s ease,
     box-shadow 0.3s ease;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+
+.project-tag {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e4e4e7;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  background: #ffffff;
+  color: #090b0e;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.project-link-btn:hover {
+  transform: translateY(-2px);
+  background: #f4f4f5;
+  color: #000000;
+}
+
+.project-link-btn.ghost {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.project-link-btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 /* Soft radial white light that appears on hover */
