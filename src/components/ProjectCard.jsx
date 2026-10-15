@@ -9,7 +9,27 @@ export default function ProjectCard({ project, index }) {
     >
       <div className="project-header">
         <h3>{project.title}</h3>
+        {project.status && (
+          <span
+            className={`project-status status-${project.status
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`}
+          >
+            {project.status}
+          </span>
+        )}
       </div>
+      {project.screenshot && (
+        <img
+          className="project-shot"
+          src={`${import.meta.env.BASE_URL}${project.screenshot.src.replace(/^\//, "")}`}
+          alt={project.screenshot.alt}
+          width={project.screenshot.width}
+          height={project.screenshot.height}
+          loading="lazy"
+          decoding="async"
+        />
+      )}
       <p>{project.description}</p>
       {project.tags && (
         <div className="project-tags">

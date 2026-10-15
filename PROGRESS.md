@@ -40,6 +40,13 @@ Audit findings: video is VP9 854x480, 691 KB (already small, kept); `portrait.jp
 - Formatted with Prettier (run via `npx prettier`, not added as a dependency). Lint and build pass.
 - Not done: no unused dependencies found to remove; TypeScript intentionally not added.
 
+### 2026-10-16 (fourth session): Phase 6
+- Project cards support `status` (Completed / In Progress / Planned) and optional `screenshot`; only existing links render. Portfolio is marked "In Progress" (edit in `src/data/projects.js`). No screenshot exists yet, none was invented.
+- Back-to-top button (`BackToTop.jsx`): appears after the hero leaves the viewport via IntersectionObserver, smooth scroll unless reduced-motion, hidden from tab order while invisible.
+- Download CV (`CvButton.jsx`): shows only if `public/cv/Julius-Kasanga-CV.pdf` exists at build time (`__HAS_CV__` in `vite.config.js`). Tested with a temporary file (button appears, PDF copied to dist), then removed. No CV has been added.
+- Contact form (`ContactForm.jsx`): labelled fields, client validation with `aria-invalid`/error text, honeypot spam field, loading/success/failure states. NOT connected to a delivery service: without `VITE_CONTACT_ENDPOINT` it opens the visitor's email app (mailto) and says nothing was sent until they press send. Never claims delivery.
+- Contrast: footer alias text raised from #71717a to #8f8f99 (was about 4.1:1). Other key colors computed at 6.7:1 or higher against the dark backgrounds (approximate, not measured on the rendered page).
+
 ## To do (needs input from Julius)
 
 - [ ] **Privacy:** `ME.JPG` (3024x4032, GPS EXIF) is still in the repo and git history. Delete it and consider the history exposed.
@@ -58,5 +65,7 @@ Audit findings: video is VP9 854x480, 691 KB (already small, kept); `portrait.jp
 
 ## Remaining from the Phase 4-6 spec
 
-- [ ] Phase 6: contact form (needs a service choice, e.g. Formspree/Web3Forms; no fake endpoint), Download CV (needs the real PDF), project card status/screenshot fields, back-to-top button.
+- [ ] Connect the contact form: create a Formspree/Web3Forms form, add its public URL as `VITE_CONTACT_ENDPOINT` (GitHub repo Settings > Variables, and pass it in the workflow build step), then send a real test message.
+- [ ] Add the real CV PDF at `public/cv/Julius-Kasanga-CV.pdf`.
+- [ ] Add a real screenshot per project.
 - [ ] Run Lighthouse and real-device checks, then record scores here.

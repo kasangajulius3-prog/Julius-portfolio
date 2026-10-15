@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 import "./styles/global.css";
 import "./styles/components.css";
 import "./styles/responsive.css";
@@ -30,6 +31,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }

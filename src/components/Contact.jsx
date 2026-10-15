@@ -1,4 +1,5 @@
 import { contacts } from "../data/contacts";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
@@ -27,6 +28,7 @@ export default function Contact() {
           );
         })}
       </ul>
+      <ContactForm />
     </section>
   );
 }
