@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kasangajulius3-prog.github.io/Julius-portfolio/sitemap.xml
