@@ -37,7 +37,7 @@ export default function Navbar() {
           if (e.isIntersecting) setActive(e.target.id);
         });
       },
-      { rootMargin: "-40% 0px -55% 0px" }
+      { rootMargin: "-40% 0px -55% 0px" },
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();

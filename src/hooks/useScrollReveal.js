@@ -15,7 +15,7 @@ export default function useScrollReveal() {
 
     // Respect reduced-motion – reveal everything instantly.
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (prefersReducedMotion) {
@@ -32,11 +32,10 @@ export default function useScrollReveal() {
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
     );
 
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 }
-

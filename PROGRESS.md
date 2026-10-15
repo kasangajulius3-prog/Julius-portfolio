@@ -33,6 +33,13 @@ Audit findings: video is VP9 854x480, 691 KB (already small, kept); `portrait.jp
 - Verified: `npm run lint` and `npm run build` pass; built HTML has correct `/Julius-portfolio/` paths, no localhost; JSON-LD and sitemap parse.
 - NOT verified (no browser/Lighthouse in this environment): visual check at each viewport, keyboard testing, console errors, Lighthouse scores, Rich Results validation.
 
+### 2026-10-16 (third session): Phase 5 component architecture
+- `App.jsx` is now a thin shell (351 lines to ~40). Components: Navbar, BackgroundVideo, Hero, About, Skills, Projects, ProjectCard, Contact, Footer, StoicIcon in `src/components/`.
+- Content moved to `src/data/skills.js`, `projects.js`, `contacts.js` (edit these to change content).
+- CSS split into `src/styles/global.css`, `components.css`, `responsive.css` (imported in that order in `App.jsx`; do not reorder, cascade depends on it). Built CSS size unchanged (13.32 kB), so nothing was lost.
+- Formatted with Prettier (run via `npx prettier`, not added as a dependency). Lint and build pass.
+- Not done: no unused dependencies found to remove; TypeScript intentionally not added.
+
 ## To do (needs input from Julius)
 
 - [ ] **Privacy:** `ME.JPG` (3024x4032, GPS EXIF) is still in the repo and git history. Delete it and consider the history exposed.
@@ -51,6 +58,5 @@ Audit findings: video is VP9 854x480, 691 KB (already small, kept); `portrait.jp
 
 ## Remaining from the Phase 4-6 spec
 
-- [ ] Phase 5: split `App.jsx` further (Hero, About, Skills, Projects, ProjectCard, Contact, Footer), move data to `src/data/*.js`, split CSS.
 - [ ] Phase 6: contact form (needs a service choice, e.g. Formspree/Web3Forms; no fake endpoint), Download CV (needs the real PDF), project card status/screenshot fields, back-to-top button.
 - [ ] Run Lighthouse and real-device checks, then record scores here.

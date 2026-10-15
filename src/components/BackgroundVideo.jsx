@@ -10,7 +10,9 @@ const BASE = import.meta.env.BASE_URL;
 export default function BackgroundVideo() {
   const videoRef = useRef(null);
   const [playVideo] = useState(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     const saveData = navigator.connection?.saveData === true;
     return !reduce && !saveData;
   });
