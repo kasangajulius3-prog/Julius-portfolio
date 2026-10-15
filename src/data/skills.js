@@ -1,52 +1,71 @@
 import {
-  FaPython,
-  FaReact,
-  FaLinux,
+  FaCode,
+  FaLaptopCode,
+  FaTools,
+  FaMicrochip,
+  FaServer,
+  FaDatabase,
+  FaRobot,
   FaShieldAlt,
-  FaEthernet,
+  FaKey,
 } from "react-icons/fa";
-import { SiCplusplus } from "react-icons/si";
-import { FaNetworkWired } from "react-icons/fa6";
 
+// Technologies I have used or studied. Move an item here only when it is true.
 export const skills = [
   {
-    name: "Python",
-    description: "Scripting, backend development, algorithms & problem solving",
-    icon: FaPython,
+    name: "Programming Languages",
+    icon: FaCode,
+    items: ["Python", "C++", "JavaScript"],
   },
   {
-    name: "React",
-    description:
-      "Modern component architectures, interactive UIs & state management",
-    icon: FaReact,
+    name: "Frontend Development",
+    icon: FaLaptopCode,
+    items: ["HTML", "CSS", "React", "Responsive Web Design"],
   },
   {
-    name: "C++",
-    description: "Systems programming, memory management & data structures",
-    icon: SiCplusplus,
+    name: "Computer Science Foundations",
+    icon: FaMicrochip,
+    items: [
+      "Data Structures & Algorithms",
+      "Operating Systems",
+      "Computer Networking",
+    ],
   },
   {
-    name: "Networking",
-    description:
-      "Data communications, protocols, TCP/IP & how systems talk to each other",
-    icon: FaEthernet,
+    name: "Developer Tools",
+    icon: FaTools,
+    items: ["Git", "GitHub", "VS Code", "Linux"],
+  },
+];
+
+// Technologies and concepts I am actively learning (not claimed as proficiency).
+export const learning = [
+  { name: "Programming", icon: FaCode, items: ["Java"] },
+  {
+    name: "Backend Development",
+    icon: FaServer,
+    items: ["FastAPI", "REST APIs", "System Architecture"],
+  },
+  { name: "Databases", icon: FaDatabase, items: ["SQL", "PostgreSQL"] },
+  {
+    name: "Machine Learning & AI",
+    icon: FaRobot,
+    items: [
+      "Machine Learning Fundamentals",
+      "Data Preprocessing",
+      "Supervised Learning",
+      "Model Evaluation",
+      "Python for Data Analysis",
+    ],
   },
   {
-    name: "Linux & Operating Systems",
-    description:
-      "Processes, memory, scheduling, file systems & the command line",
-    icon: FaLinux,
-  },
-  {
-    name: "Cybersecurity",
-    description:
-      "Capture-the-flag challenges, secure design & thinking like an attacker",
+    name: "Cybersecurity & Cryptography",
     icon: FaShieldAlt,
-  },
-  {
-    name: "System Design",
-    description:
-      "Application architecture, scalability, networking & distributed systems",
-    icon: FaNetworkWired,
+    items: [
+      "Network Security Fundamentals",
+      "Secure Software Development",
+      "Encryption & Hashing Concepts",
+      "Authentication & Digital Signatures",
+    ],
   },
 ];

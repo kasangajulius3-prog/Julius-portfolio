@@ -1,4 +1,5 @@
-import { skills } from "../data/skills";
+import { learning, skills } from "../data/skills";
+import SkillGroup from "./SkillGroup";
 
 export default function Skills() {
   return (
@@ -6,24 +7,25 @@ export default function Skills() {
       <h2 id="skills-title" data-reveal>
         Tools & Skills
       </h2>
+      <h3 className="subsection-title" data-reveal>
+        Skills & Technologies
+      </h3>
       <div className="skills-grid">
-        {skills.map((skill, i) => {
-          const Icon = skill.icon;
-          return (
-            <div
-              className="skill-card"
-              key={skill.name}
-              data-reveal
-              style={{ "--delay": `${(i + 1) * 0.1}s` }}
-            >
-              <div className="skill-icon-wrapper">
-                <Icon className="skill-icon" aria-hidden="true" />
-              </div>
-              <h3 className="skill-name">{skill.name}</h3>
-              <p className="skill-desc">{skill.description}</p>
-            </div>
-          );
-        })}
+        {skills.map((group, i) => (
+          <SkillGroup key={group.name} group={group} index={i} />
+        ))}
+      </div>
+      <h3 className="subsection-title" data-reveal>
+        Currently Learning
+      </h3>
+      <p className="section-intro" data-reveal>
+        Technologies and concepts I'm actively studying, not yet claimed as
+        strengths.
+      </p>
+      <div className="skills-grid">
+        {learning.map((group, i) => (
+          <SkillGroup key={group.name} group={group} index={i} />
+        ))}
       </div>
     </section>
   );

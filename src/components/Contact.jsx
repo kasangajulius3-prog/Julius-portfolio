@@ -7,6 +7,11 @@ export default function Contact() {
       <h2 id="contact-title" data-reveal>
         Contact
       </h2>
+      <p className="section-intro" data-reveal>
+        I'm open to collaborating on software projects, exploring internship
+        opportunities, and connecting with developers, researchers, and
+        technology enthusiasts.
+      </p>
       <ul className="contact-list">
         {contacts.map((contact, i) => {
           const Icon = contact.icon;

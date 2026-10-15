@@ -6,6 +6,9 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Exploring from "./components/Exploring";
+import Education from "./components/Education";
+import Activities from "./components/Activities";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
@@ -27,7 +30,10 @@ function App() {
         <Hero portrait={portrait} />
         <About />
         <Skills />
+        <Exploring />
         <Projects />
+        <Education />
+        <Activities />
         <Contact />
       </main>
       <Footer />

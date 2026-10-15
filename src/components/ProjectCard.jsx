@@ -18,6 +18,9 @@ export default function ProjectCard({ project, index }) {
             {project.status}
           </span>
         )}
+        {project.statusNote && (
+          <span className="project-status-note">{project.statusNote}</span>
+        )}
       </div>
       {project.screenshot && (
         <img
@@ -40,31 +43,33 @@ export default function ProjectCard({ project, index }) {
           ))}
         </div>
       )}
-      <div className="project-links">
-        {project.liveHref && (
-          <a
-            href={project.liveHref}
-            target="_blank"
-            rel="noreferrer"
-            className="project-link-btn"
-          >
-            <span>Live Site</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        )}
-        {project.href && (
-          <a
-            href={project.href}
-            target="_blank"
-            rel="noreferrer"
-            className="project-link-btn ghost"
-          >
-            <FaGithub aria-hidden="true" />
-            <span>Repository</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        )}
-      </div>
+      {(project.liveHref || project.href) && (
+        <div className="project-links">
+          {project.liveHref && (
+            <a
+              href={project.liveHref}
+              target="_blank"
+              rel="noreferrer"
+              className="project-link-btn"
+            >
+              <span>Live Site</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          )}
+          {project.href && (
+            <a
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              className="project-link-btn ghost"
+            >
+              <FaGithub aria-hidden="true" />
+              <span>Repository</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          )}
+        </div>
+      )}
     </article>
   );
 }
