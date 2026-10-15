@@ -40,8 +40,8 @@ export default function Hero({ portrait }) {
         <img
           src={portrait}
           alt="Portrait of Julius Kasanga"
-          width="675"
-          height="900"
+          width="680"
+          height="850"
           fetchPriority="high"
           decoding="async"
         />
