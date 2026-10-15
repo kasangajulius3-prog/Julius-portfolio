@@ -22,11 +22,23 @@ Running record of work on this portfolio so anyone (including a future Claude se
 - Added this `PROGRESS.md`.
 - Verified `npm run build` and `npm run lint` pass.
 
+### 2026-10-16 (second session): Phase 4 + SEO from the Phase 4-6 spec
+Audit findings: video is VP9 854x480, 691 KB (already small, kept); `portrait.jpg` and `ME.JPG` contain phone GPS EXIF data; no mobile menu; no poster/fallback for the video; no canonical, robots.txt, sitemap or JSON-LD.
+- Added `src/components/BackgroundVideo.jsx`: WebP poster (9 KB) always shown, video skipped for reduced-motion and Save-Data users, paused when tab is hidden, `preload="metadata"`.
+- Added `src/components/Navbar.jsx`: animated hamburger, `aria-expanded`/`aria-controls`, closes on Escape (focus returns to button) and on link click, closed items not focusable (`visibility`), active-section highlight via IntersectionObserver.
+- Extracted `StoicIcon` component; moved hook to `src/hooks/useScrollReveal.js`.
+- Portrait converted to WebP (110 KB to 31 KB), EXIF/GPS stripped, width/height and `fetchpriority="high"` added.
+- Responsive polish: `clamp()` hero title, 44px touch targets, `100lvh` background, no horizontal overflow, stacked hero buttons under 420px.
+- SEO: title, description, canonical, robots, Open Graph, Twitter card, theme color, favicon via `%BASE_URL%`, Person JSON-LD, `robots.txt`, `sitemap.xml`, `og-image.jpg` (EXIF-stripped).
+- Verified: `npm run lint` and `npm run build` pass; built HTML has correct `/Julius-portfolio/` paths, no localhost; JSON-LD and sitemap parse.
+- NOT verified (no browser/Lighthouse in this environment): visual check at each viewport, keyboard testing, console errors, Lighthouse scores, Rich Results validation.
+
 ## To do (needs input from Julius)
+
+- [ ] **Privacy:** `ME.JPG` (3024x4032, GPS EXIF) is still in the repo and git history. Delete it and consider the history exposed.
 
 - [ ] **Projects:** only the portfolio itself is listed. Add 2-3 real projects (what it does, tech, repo/demo link, a screenshot if possible).
 - [ ] **Contact section:** two emails and two phone numbers are public in the source. Consider keeping one email plus LinkedIn/GitHub.
-- [ ] **Share preview:** add an `og:image` and matching meta tags in `index.html`.
 - [ ] **CV:** add a downloadable CV/resume link.
 - [ ] **Cleanup:** `ME.JPG` in the repo root looks unused; confirm before deleting.
 
@@ -36,3 +48,9 @@ Running record of work on this portfolio so anyone (including a future Claude se
 - Always run `npm run build` and `npm run lint` before pushing; the deploy workflow runs `npm ci` + `npm run build`.
 - After pushing, check the Actions tab (or the API) to confirm the Pages deploy succeeded.
 - Never commit access tokens or secrets to this repo.
+
+## Remaining from the Phase 4-6 spec
+
+- [ ] Phase 5: split `App.jsx` further (Hero, About, Skills, Projects, ProjectCard, Contact, Footer), move data to `src/data/*.js`, split CSS.
+- [ ] Phase 6: contact form (needs a service choice, e.g. Formspree/Web3Forms; no fake endpoint), Download CV (needs the real PDF), project card status/screenshot fields, back-to-top button.
+- [ ] Run Lighthouse and real-device checks, then record scores here.

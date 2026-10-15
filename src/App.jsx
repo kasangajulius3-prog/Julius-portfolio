@@ -1,39 +1,11 @@
 import { FaEnvelope, FaLinkedin, FaGithub, FaPhone, FaPython, FaReact, FaLinux, FaShieldAlt, FaEthernet } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import { FaNetworkWired } from "react-icons/fa6";
-import portrait from "./assets/portrait.jpg";
-import useScrollReveal from "./useScrollReveal";
+import portrait from "./assets/portrait.webp";
+import useScrollReveal from "./hooks/useScrollReveal";
+import BackgroundVideo from "./components/BackgroundVideo";
+import Navbar from "./components/Navbar";
 import "./App.css";
-
-// Custom Stoic SVG Icon component
-function StoicIcon({ className = "stoic-logo-icon" }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 100 100"
-      width="22"
-      height="22"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <polygon
-        points="50,6 94,50 50,94 6,50"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinejoin="round"
-      />
-      <polygon points="50,22 74,36 26,36" fill="currentColor" opacity="0.95" />
-      <rect x="23" y="38" width="54" height="4" rx="1" fill="currentColor" />
-      <rect x="28" y="44" width="7" height="26" rx="1.5" fill="currentColor" />
-      <rect x="41" y="44" width="7" height="26" rx="1.5" fill="currentColor" />
-      <rect x="53" y="44" width="7" height="26" rx="1.5" fill="currentColor" />
-      <rect x="65" y="44" width="7" height="26" rx="1.5" fill="currentColor" />
-      <rect x="23" y="72" width="54" height="4" rx="1" fill="currentColor" />
-      <rect x="20" y="77" width="60" height="5" rx="1.5" fill="currentColor" />
-    </svg>
-  );
-}
 
 const skills = [
   {
@@ -126,43 +98,8 @@ function App() {
         Skip to content
       </a>
 
-      {/* Earth in Space Interactive Background */}
-      <div className="bg-video-container" aria-hidden="true">
-        <video
-          className="bg-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src={`${import.meta.env.BASE_URL}assets/earth.webm`} type="video/webm" />
-        </video>
-        <div className="bg-video-overlay" />
-        <div className="stars-layer" />
-      </div>
-
-      <header className="site-header anim-slide-down">
-        <nav className="nav" aria-label="Primary">
-          <a className="nav-brand" href="#top">
-            <StoicIcon className="brand-stoic-icon" />
-            <span>Julius Kasanga</span>
-          </a>
-          <ul className="nav-links">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#skills">Tools & Skills</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <BackgroundVideo />
+      <Navbar />
 
       <main id="main">
         <section className="hero" id="top" aria-labelledby="hero-title">
@@ -201,7 +138,14 @@ function App() {
             </div>
           </div>
           <div className="hero-portrait anim-fade-in-right">
-            <img src={portrait} alt="Portrait of Julius Kasanga" />
+            <img
+              src={portrait}
+              alt="Portrait of Julius Kasanga"
+              width="675"
+              height="900"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
         </section>
 
