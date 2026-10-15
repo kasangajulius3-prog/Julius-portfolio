@@ -5,32 +5,34 @@ export default function About() {
         About Me
       </h2>
       <p data-reveal style={{ "--delay": "0.1s" }}>
-        I'm a Computer Science student and aspiring Software Engineer based in
-        Zambia, passionate about building practical technology that solves
-        real-world problems.
+        I'm Julius Kasanga, a Computer Science student at Mukuba University in
+        Zambia, working toward a career in software engineering.
       </p>
       <p data-reveal style={{ "--delay": "0.2s" }}>
-        I enjoy working across software development, web technologies,
-        cybersecurity, and systems design. I'm constantly learning by building
-        projects, participating in technical challenges, and exploring how
-        technology can make everyday processes more accessible and efficient.
+        I'm particularly interested in understanding how software systems work,
+        from application development and backend architecture to the security
+        mechanisms that protect them.
       </p>
       <p data-reveal style={{ "--delay": "0.3s" }}>
-        My goal is to grow into a well-rounded software engineer who can design,
-        build, and secure reliable systems. I'm particularly interested in
-        backend development, application architecture, and cybersecurity.
+        My technical interests extend into machine learning, cybersecurity, and
+        cryptography, where I'm exploring how intelligent algorithms and secure
+        computing principles can be applied to real-world problems.
       </p>
       <p data-reveal style={{ "--delay": "0.4s" }}>
-        When I'm not studying or coding, I'm usually experimenting with a new
-        technology, breaking something I probably shouldn't have broken, and
-        then figuring out how to fix it.
+        I enjoy learning through practical development, technical challenges,
+        experimentation, and collaborative projects.
+      </p>
+      <p data-reveal style={{ "--delay": "0.5s" }}>
+        My long-term goal is to become a skilled software engineer capable of
+        designing reliable, scalable, and secure applications while continuously
+        expanding my knowledge of emerging technologies.
       </p>
       <blockquote
         className="quote-badge"
         data-reveal
-        style={{ "--delay": "0.5s" }}
+        style={{ "--delay": "0.6s" }}
       >
-        <span className="quote-latin">"Carpe diem"</span>
+        <span className="quote-latin">Stoic | Carpe Diem</span>
         <span className="quote-sub">
           — Seize the day, make each moment count
         </span>

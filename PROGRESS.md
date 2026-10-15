@@ -52,6 +52,21 @@ Audit findings: video is VP9 854x480, 691 KB (already small, kept); `portrait.jp
 - Added a web "Curriculum Vitae" section, then REMOVED it at Julius's request (CV must be a downloadable PDF, not an on-page section). `CvSection.jsx`, its CSS and the "CV" nav item are gone.
 - CV is now only the Download CV button in the hero (`CvButton.jsx`), hidden until `public/cv/Julius-Kasanga-CV.pdf` exists.
 
+### 2026-10-16 (sixth session): Phases 1-3 spec (identity, projects, skills/education)
+Phase 1
+- Hero: name as h1, subtitle "Computer Science Student | Aspiring Software Engineer", new intro text, buttons View Projects / Download CV (hidden until the PDF exists) / Contact Me.
+- About rewritten with the supplied text; badge now "Stoic | Carpe Diem".
+- Contact: one primary email (kasangajulius42@gmail.com, the one previously labelled Work), LinkedIn, GitHub, intro sentence, form kept. Both phone numbers and the second email removed from the page. Contact-form mailto fallback uses the same email.
+Phase 2
+- `src/data/projects.js`: verified `projects` (Personal Developer Portfolio, status Completed + note "Ongoing improvements", real repo/live links) and separate `plannedProjects` (USSD admissions platform, academic performance prediction, cryptography learning toolkit). Planned ones have no links, screenshots or results and sit under a "Planned Projects" heading that says none are implemented.
+- Project filters intentionally omitted (one verified project). Add when there are enough projects.
+Phase 3
+- Skills split into "Skills & Technologies" (Python, C++, JavaScript, HTML, CSS, React, responsive design, DSA, OS, networking, Git, GitHub, VS Code, Linux) and "Currently Learning" (Java, FastAPI, REST, system architecture, SQL, PostgreSQL, ML topics, security/cryptography topics) in `src/data/skills.js`. Placement was based on evidence in the repo and coursework; Julius should move items he has actually used.
+- New sections: Currently Exploring (4 cards), Education (BSc Computer Science, Mukuba University, expected 2028, relevant coursework, certifications), Leadership & Activities (hidden while `src/data/activities.js` is empty).
+- Certification listed: FNB App Academy, Python Fundamentals (name and issuer only; no date or credential link invented).
+- Nav: About, Tools & Skills, Projects, Education, Contact.
+- Verified: lint and build pass; key strings present in the built bundle. NOT verified: visual layout of the new sections, mobile layout, keyboard and console checks (no browser here).
+
 ## To do (needs input from Julius)
 
 - [ ] **Privacy:** `ME.JPG` (3024x4032, GPS EXIF) is still in the repo and git history. Delete it and consider the history exposed.

@@ -11,4 +11,4 @@ export const cvUrl = __HAS_CV__
 // Set VITE_CONTACT_ENDPOINT at build time. When empty, the form falls back to
 // opening the visitor's email app, and never claims a message was delivered.
 export const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || "";
-export const contactEmail = "kasangajulius3@gmail.com";
+export const contactEmail = "kasangajulius42@gmail.com";
