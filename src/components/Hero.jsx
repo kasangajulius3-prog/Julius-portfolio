@@ -1,6 +1,13 @@
+import CvButton from "./CvButton";
+
 export default function Hero({ portrait }) {
   return (
-    <section className="hero" id="top" aria-labelledby="hero-title">
+    <section
+      className="hero"
+      id="top"
+      tabIndex={-1}
+      aria-labelledby="hero-title"
+    >
       <div className="hero-copy">
         <p className="hero-eyebrow anim-fade-up" style={{ "--anim-order": 0 }}>
           Aspiring Software Engineer
@@ -26,6 +33,7 @@ export default function Hero({ portrait }) {
           <a className="btn btn-ghost" href="#contact">
             Get in touch
           </a>
+          <CvButton />
         </div>
       </div>
       <div className="hero-portrait anim-fade-in-right">
