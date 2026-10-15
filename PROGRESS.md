@@ -67,6 +67,10 @@ Phase 3
 - Nav: About, Tools & Skills, Projects, Education, Contact.
 - Verified: lint and build pass; key strings present in the built bundle. NOT verified: visual layout of the new sections, mobile layout, keyboard and console checks (no browser here).
 
+### 2026-10-16 (seventh session): coursework verified
+- Julius shared his 2026 results slip (screenshot, private; not stored in the repo). All 8 listed courses are completed, so the heading is now "Completed coursework" and names match the official titles (Introduction to Programming, Data Communication and Networking, Computer Architecture and Organisation). CHE110 (Chemistry) deliberately left out as not relevant.
+- Grades, registrar name and the slip itself are deliberately NOT published. Optional: a general line such as "strong results in core software engineering and systems courses" if he wants it.
+
 ## To do (needs input from Julius)
 
 - [ ] **Privacy:** `ME.JPG` (3024x4032, GPS EXIF) is still in the repo and git history. Delete it and consider the history exposed.

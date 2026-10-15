@@ -17,7 +17,7 @@ export default function Education() {
           {education.expectedGraduation}
         </p>
         <p>{education.description}</p>
-        <h4 className="info-label">Relevant coursework</h4>
+        <h4 className="info-label">Completed coursework</h4>
         <ul className="chip-list">
           {coursework.map((c) => (
             <li className="skill-chip" key={c}>
