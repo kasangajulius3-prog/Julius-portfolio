@@ -1,4 +1,4 @@
-import { FaEnvelope, FaLinkedin, FaGithub, FaPhone, FaPython, FaReact } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaPhone, FaPython, FaReact, FaLinux, FaShieldAlt, FaEthernet } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import { FaNetworkWired } from "react-icons/fa6";
 import portrait from "./assets/portrait.jpg";
@@ -50,6 +50,21 @@ const skills = [
     name: "C++",
     description: "Systems programming, memory management & data structures",
     icon: SiCplusplus,
+  },
+  {
+    name: "Networking",
+    description: "Data communications, protocols, TCP/IP & how systems talk to each other",
+    icon: FaEthernet,
+  },
+  {
+    name: "Linux & Operating Systems",
+    description: "Processes, memory, scheduling, file systems & the command line",
+    icon: FaLinux,
+  },
+  {
+    name: "Cybersecurity",
+    description: "Capture-the-flag challenges, secure design & thinking like an attacker",
+    icon: FaShieldAlt,
   },
   {
     name: "System Design",
