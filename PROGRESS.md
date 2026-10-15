@@ -49,7 +49,8 @@ Audit findings: video is VP9 854x480, 691 KB (already small, kept); `portrait.jp
 
 ### 2026-10-16 (fifth session): portrait crop + CV section
 - Portrait re-cropped from the original `ME.JPG` (high-res source) to remove empty space above the head: 4:5 crop, resized to 680x850 WebP (27 KB), EXIF stripped. `og-image.jpg` regenerated from the same crop (680x850); width/height attrs and OG dimensions updated. `ME.JPG` is kept in the repo as the source for now.
-- Added a "Curriculum Vitae" section (`CvSection.jsx`, nav item "CV"): education, focus areas and skills taken only from existing site content, plus the Download CV button, which stays hidden until `public/cv/Julius-Kasanga-CV.pdf` exists.
+- Added a web "Curriculum Vitae" section, then REMOVED it at Julius's request (CV must be a downloadable PDF, not an on-page section). `CvSection.jsx`, its CSS and the "CV" nav item are gone.
+- CV is now only the Download CV button in the hero (`CvButton.jsx`), hidden until `public/cv/Julius-Kasanga-CV.pdf` exists.
 
 ## To do (needs input from Julius)
 
