@@ -83,9 +83,15 @@ Phase 3
 - Education: dates now "Oct 2024 - 2029 (expected)" to match the CV. The earlier spec said 2028; changed to match the CV, confirm which is right.
 - Skills updated from the CV: Java moved from Currently Learning to Skills; added Vite, ESLint, Power BI, Excel and "Cybersecurity (CTF)".
 
+### 2026-10-24 (ninth session): CV removed from the site
+- Julius felt uncomfortable publishing the CV (it has his phone number and personal details). Deleted `public/cv/Julius-Kasanga-CV.pdf`; the site no longer serves any CV file.
+- The hero button is now "Request CV": it opens an email to kasangajulius42@gmail.com with subject "CV request" and a short prefilled message. Julius sends the CV manually when someone asks.
+- Removed the `__HAS_CV__` build flag from `vite.config.js` and `cvUrl` from `src/data/site.js` (no longer needed).
+- The PDF still exists in git history (commit `c0967a8`) and the old GPS version of `ME.JPG` in earlier commits; purging needs a history rewrite + force push, awaiting his decision.
+
 ## To do (needs input from Julius)
 
-- [ ] **Privacy:** `ME.JPG` is now stripped, but the old GPS version remains in git history. Decide whether to purge history (force push).
+- [ ] **Privacy (CV + photo in git history):** `ME.JPG` is now stripped, but the old GPS version remains in git history. Decide whether to purge history (force push).
 
 - [ ] **Projects:** only the portfolio itself is listed. Add 2-3 real projects (what it does, tech, repo/demo link, a screenshot if possible).
 - [ ] **Contact section:** two emails and two phone numbers are public in the source. Consider keeping one email plus LinkedIn/GitHub.
