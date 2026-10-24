@@ -15,7 +15,7 @@ export const skills = [
   {
     name: "Programming Languages",
     icon: FaCode,
-    items: ["Python", "C++", "JavaScript"],
+    items: ["Java", "Python", "C++", "JavaScript"],
   },
   {
     name: "Frontend Development",
@@ -29,18 +29,27 @@ export const skills = [
       "Data Structures & Algorithms",
       "Operating Systems",
       "Computer Networking",
+      "Cybersecurity (CTF)",
     ],
   },
   {
     name: "Developer Tools",
     icon: FaTools,
-    items: ["Git", "GitHub", "VS Code", "Linux"],
+    items: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Vite",
+      "ESLint",
+      "Linux",
+      "Power BI",
+      "Excel",
+    ],
   },
 ];
 
 // Technologies and concepts I am actively learning (not claimed as proficiency).
 export const learning = [
-  { name: "Programming", icon: FaCode, items: ["Java"] },
   {
     name: "Backend Development",
     icon: FaServer,
