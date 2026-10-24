@@ -13,8 +13,8 @@ export default function Education() {
       <div className="info-card" data-reveal style={{ "--delay": "0.1s" }}>
         <h3>{education.program}</h3>
         <p className="info-meta">
-          {education.institution}, {education.location} · Expected graduation{" "}
-          {education.expectedGraduation}
+          {education.institution}, {education.location} · {education.startDate}{" "}
+          – {education.expectedGraduation} (expected)
         </p>
         <p>{education.description}</p>
         <h4 className="info-label">Completed coursework</h4>
@@ -52,6 +52,7 @@ export default function Education() {
                   {c.issuer}
                   {c.date ? ` · ${c.date}` : ""}
                 </p>
+                {c.description && <p>{c.description}</p>}
               </li>
             ))}
           </ul>

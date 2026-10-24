@@ -75,9 +75,17 @@ Phase 3
 - Added GoatCounter (site code `juliuskasanga`, dashboard https://juliuskasanga.goatcounter.com) as a script tag in `index.html`. Cookie-free, so no consent banner. The script skips localhost by default, so dev visits are not counted. Chosen over Google Analytics 4 for simplicity and speed; GA4 can be added later if deeper data is needed.
 - Verified by Julius: visits appear on the GoatCounter dashboard.
 
+### 2026-10-24 (eighth session): CV, privacy, activities
+- Added Julius's CV at `public/cv/Julius-Kasanga-CV.pdf` (source: his LaTeX CV). The Download CV button now appears in the hero (activated by the file existing at build time). PDF metadata has no author/title. NOTE: the CV itself contains his phone number and email, so anyone can download them.
+- `ME.JPG` metadata (GPS coordinates, timestamps) stripped in place; re-encoded, orientation fixed, 3024x4032, no EXIF left. The OLD version with GPS data still exists in git history (commit `b186cd8` and earlier). Removing it would need a history rewrite + force push; not done, awaiting Julius's decision. All other repo images were checked: no GPS data.
+- Activities section now live with the Digital Safe CTF entry (team competitor, team ranked 5th in Zambia, taken from the CV). No challenge details or flags published.
+- Certifications: added "Career Boost with Power BI and AI" (Exodus Experts, 2026, 8-hour course on AI tools, Power BI and Excel). FNB Python Fundamentals kept (from Julius's earlier spec; it is NOT on the CV; confirm).
+- Education: dates now "Oct 2024 - 2029 (expected)" to match the CV. The earlier spec said 2028; changed to match the CV, confirm which is right.
+- Skills updated from the CV: Java moved from Currently Learning to Skills; added Vite, ESLint, Power BI, Excel and "Cybersecurity (CTF)".
+
 ## To do (needs input from Julius)
 
-- [ ] **Privacy:** `ME.JPG` (3024x4032, GPS EXIF) is still in the repo and git history. Delete it and consider the history exposed.
+- [ ] **Privacy:** `ME.JPG` is now stripped, but the old GPS version remains in git history. Decide whether to purge history (force push).
 
 - [ ] **Projects:** only the portfolio itself is listed. Add 2-3 real projects (what it does, tech, repo/demo link, a screenshot if possible).
 - [ ] **Contact section:** two emails and two phone numbers are public in the source. Consider keeping one email plus LinkedIn/GitHub.
@@ -94,6 +102,5 @@ Phase 3
 ## Remaining from the Phase 4-6 spec
 
 - [ ] Connect the contact form: create a Formspree/Web3Forms form, add its public URL as `VITE_CONTACT_ENDPOINT` (GitHub repo Settings > Variables, and pass it in the workflow build step), then send a real test message.
-- [ ] Add the real CV PDF at `public/cv/Julius-Kasanga-CV.pdf`.
 - [ ] Add a real screenshot per project.
 - [ ] Run Lighthouse and real-device checks, then record scores here.

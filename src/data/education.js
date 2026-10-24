@@ -1,7 +1,8 @@
 export const education = {
   institution: "Mukuba University",
   program: "Bachelor of Science in Computer Science",
-  expectedGraduation: "2028",
+  startDate: "Oct 2024",
+  expectedGraduation: "2029",
   location: "Zambia",
   description:
     "Pursuing a Bachelor of Science in Computer Science with academic interests in software engineering, algorithms, computer systems, networking, database technologies, cybersecurity, and intelligent computing.",
@@ -21,6 +22,12 @@ export const coursework = [
 
 // Add verified certifications only. Optional fields: date, credentialUrl.
 export const certifications = [
+  {
+    name: "Career Boost with Power BI and AI",
+    issuer: "Exodus Experts",
+    date: "2026",
+    description: "8-hour course on the use of AI tools, Power BI and Excel.",
+  },
   {
     name: "Python Fundamentals",
     issuer: "FNB App Academy",
