@@ -1,16 +1,18 @@
-import { cvUrl } from "../data/site";
+import { contactEmail } from "../data/site";
 
+const subject = encodeURIComponent("CV request");
+const body = encodeURIComponent(
+  "Hello Julius,\n\nI'd like to request a copy of your CV.\n\nName:\nOrganisation:\n",
+);
+
+// The CV is not published on the site. Visitors request it by email.
 export default function CvButton({ className = "btn btn-ghost" }) {
-  if (!cvUrl) return null;
   return (
     <a
       className={className}
-      href={cvUrl}
-      download
-      target="_blank"
-      rel="noreferrer"
+      href={`mailto:${contactEmail}?subject=${subject}&body=${body}`}
     >
-      Download CV
+      Request CV
     </a>
   );
 }
