@@ -73,7 +73,7 @@ Phase 3
 
 ### 2026-10-24: analytics
 - Added GoatCounter (site code `juliuskasanga`, dashboard https://juliuskasanga.goatcounter.com) as a script tag in `index.html`. Cookie-free, so no consent banner. The script skips localhost by default, so dev visits are not counted. Chosen over Google Analytics 4 for simplicity and speed; GA4 can be added later if deeper data is needed.
-- Not yet verified: that a real visit appears on the dashboard (needs a check on the live site in a private window).
+- Verified by Julius: visits appear on the GoatCounter dashboard.
 
 ## To do (needs input from Julius)
 
