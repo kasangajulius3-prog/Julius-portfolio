@@ -20,18 +20,32 @@ export default function Activities() {
             data-reveal
             style={{ "--delay": `${(i + 1) * 0.1}s` }}
           >
-            {a.images?.map((img) => (
-              <img
-                className="activity-shot"
-                key={img.src}
-                src={img.src}
-                alt={img.alt}
-                width={img.width}
-                height={img.height}
-                loading="lazy"
-                decoding="async"
-              />
-            ))}
+            {a.images?.map((img) => {
+              const pic = (
+                <img
+                  className={`activity-shot${img.document ? " activity-shot-doc" : ""}`}
+                  src={img.src}
+                  alt={img.alt}
+                  width={img.width}
+                  height={img.height}
+                  loading="lazy"
+                  decoding="async"
+                />
+              );
+              return img.document ? (
+                <a
+                  key={img.src}
+                  className="activity-shot-link"
+                  href={img.src}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {pic}
+                </a>
+              ) : (
+                <span key={img.src}>{pic}</span>
+              );
+            })}
             <h3>{a.title}</h3>
             {(a.role || a.organization || a.period) && (
               <p className="info-meta">

@@ -107,6 +107,10 @@ Phase 3
 - Added a team photo to the Digital Safe Zambia CTF 2026 entry (`src/assets/ctf-team.webp`, 1400x934 WebP, ~metadata stripped, lazy-loaded, generic alt text, no names). Source: photo Julius supplied. Teammates are visible, so he should be sure they are fine with it being public; photographer credit not added (unknown).
 - The first scoreboard screenshot (17 entries, 1,992 pts) was the qualifier round, so NOT used. Julius then supplied the ADVERS-AI CTF 2026 Finals scoreboard: 11 teams, 17 vaults, MKBA-Stoic95 5th with 1,310 pts (tied on points with 6th), event 31 Oct 2026. Confirms "5th of 11 finalist teams", 9/17 vaults. Added a cropped, redacted version (`src/assets/ctf-scoreboard.webp`: browser bar, sidebar, avatar and all captain names removed/blurred; other teams' names kept as on the public board). CTF entry now has `images` (array) and mentions 1,310 points.
 
+### 2026-11-03 (thirteenth session): internship offer letter
+- Added the Networkwalks offer letter image to the internship entry (`src/assets/networkwalks-offer-letter.webp`, 1085x1536, shown at max 420px, click opens full size in a new tab). Julius had already blurred the intern ID and verification QR; I additionally blurred the Managing Director's signature. Company contact details on the letter's sidebar are left as printed.
+- Internship objective text added, taken only from the letter's programme description (network security, vulnerability assessment, pen testing, security operations, incident response, digital forensics, risk assessment). No duties or outcomes claimed for Julius.
+
 ## To do (needs input from Julius)
 
 

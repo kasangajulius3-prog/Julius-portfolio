@@ -1040,3 +1040,13 @@ h2[data-reveal].revealed::after {
   border: 1px solid var(--surface-border);
   margin-bottom: 16px;
 }
+
+/* Document images (e.g. offer letter): smaller, click to open full size */
+.activity-shot-link {
+  display: block;
+  max-width: 420px;
+}
+
+.activity-shot-doc {
+  max-width: 100%;
+}

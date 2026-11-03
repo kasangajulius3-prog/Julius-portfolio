@@ -1,5 +1,6 @@
 import ctfTeam from "../assets/ctf-team.webp";
 import ctfScoreboard from "../assets/ctf-scoreboard.webp";
+import offerLetter from "../assets/networkwalks-offer-letter.webp";
 
 // Experience, leadership, hackathons, competitions, CTFs, team projects.
 // Add only real, verifiable entries. The section stays hidden while empty.
@@ -12,6 +13,17 @@ export const activities = [
     organization: "Networkwalks IT Solutions & Training",
     period: "25 Oct – 22 Nov 2026",
     role: "Intern",
+    objective:
+      "A hands-on training programme covering network security, vulnerability assessment, penetration testing, security operations, incident response, digital forensics and risk assessment.",
+    images: [
+      {
+        src: offerLetter,
+        alt: "Offer letter from Networkwalks IT Solutions & Training for a Cybersecurity Internship, 25 October to 22 November 2026. The intern ID and verification code are blurred.",
+        width: 1085,
+        height: 1536,
+        document: true,
+      },
+    ],
   },
   {
     title: "Digital Safe Zambia CTF 2026",
