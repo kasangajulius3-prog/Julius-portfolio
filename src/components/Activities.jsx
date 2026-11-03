@@ -20,6 +20,17 @@ export default function Activities() {
             data-reveal
             style={{ "--delay": `${(i + 1) * 0.1}s` }}
           >
+            {a.image && (
+              <img
+                className="activity-shot"
+                src={a.image.src}
+                alt={a.image.alt}
+                width={a.image.width}
+                height={a.image.height}
+                loading="lazy"
+                decoding="async"
+              />
+            )}
             <h3>{a.title}</h3>
             {(a.role || a.organization || a.period) && (
               <p className="info-meta">

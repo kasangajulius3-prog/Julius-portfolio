@@ -103,6 +103,10 @@ Phase 3
 - Anyone with an old clone must re-clone (or `git fetch && git reset --hard origin/main`). GitHub may still serve the old commits by direct SHA link, via forks, or from cache until GitHub support purges them.
 - A local backup bundle existed only in the workspace's /tmp and is not kept.
 
+### 2026-11-03 (twelfth session): CTF photo
+- Added a team photo to the Digital Safe Zambia CTF 2026 entry (`src/assets/ctf-team.webp`, 1400x934 WebP, ~metadata stripped, lazy-loaded, generic alt text, no names). Source: photo Julius supplied. Teammates are visible, so he should be sure they are fine with it being public; photographer credit not added (unknown).
+- Julius also supplied a CTFroom scoreboard screenshot (MKBA-Stoic95 in 5th, 1,992 pts). NOT added: it shows "17 entries" while the site says "5th of 11 finalist teams", plus browser chrome, his avatar and a captain's full name. Needs confirmation of the correct team count, and a crop/redaction, before use.
+
 ## To do (needs input from Julius)
 
 
