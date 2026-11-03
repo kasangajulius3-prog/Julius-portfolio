@@ -2,7 +2,7 @@ export const education = {
   institution: "Mukuba University",
   program: "Bachelor of Science in Computer Science",
   startDate: "Oct 2024",
-  expectedGraduation: "2029",
+  expectedGraduation: "2028",
   location: "Zambia",
   description:
     "Pursuing a Bachelor of Science in Computer Science with academic interests in software engineering, algorithms, computer systems, networking, database technologies, cybersecurity, and intelligent computing.",
@@ -27,9 +27,5 @@ export const certifications = [
     issuer: "Exodus Experts",
     date: "2026",
     description: "8-hour course on the use of AI tools, Power BI and Excel.",
-  },
-  {
-    name: "Python Fundamentals",
-    issuer: "FNB App Academy",
   },
 ];

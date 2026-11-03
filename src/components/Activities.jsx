@@ -10,7 +10,7 @@ export default function Activities() {
       aria-labelledby="activities-title"
     >
       <h2 id="activities-title" data-reveal>
-        Leadership & Activities
+        Experience & Activities
       </h2>
       <div className="project-grid">
         {activities.map((a, i) => (
@@ -21,7 +21,11 @@ export default function Activities() {
             style={{ "--delay": `${(i + 1) * 0.1}s` }}
           >
             <h3>{a.title}</h3>
-            {a.role && <p className="info-meta">{a.role}</p>}
+            {(a.role || a.organization || a.period) && (
+              <p className="info-meta">
+                {[a.role, a.organization, a.period].filter(Boolean).join(" · ")}
+              </p>
+            )}
             {a.objective && <p>{a.objective}</p>}
             {a.responsibilities && <p>{a.responsibilities}</p>}
             {a.technologies?.length > 0 && (

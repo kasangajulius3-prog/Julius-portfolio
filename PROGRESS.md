@@ -89,6 +89,14 @@ Phase 3
 - Removed the `__HAS_CV__` build flag from `vite.config.js` and `cvUrl` from `src/data/site.js` (no longer needed).
 - The PDF still exists in git history (commit `c0967a8`) and the old GPS version of `ME.JPG` in earlier commits; purging needs a history rewrite + force push, awaiting his decision.
 
+### 2026-11-03 (tenth session): updates from Julius MD review
+- Graduation corrected to 2028 (Julius MD and cv record say 2028; the 2029 on the earlier CV PDF was wrong). Start date "Oct 2024" kept.
+- Removed the FNB App Academy "Python Fundamentals" certificate (not on his CV or records, not verified). Only "Career Boost with Power BI and AI" (Exodus Experts, 2026) remains.
+- Kept the USSD Admissions Access Platform as a Planned Project (Julius's decision, despite earlier IP concerns noted in his records).
+- Activities section renamed "Experience & Activities". Added Cybersecurity Internship (Networkwalks IT Solutions & Training, 25 Oct – 22 Nov 2026, intern; no duties or outcomes invented). CTF entry rewritten: Digital Safe Zambia CTF 2026, Cryptography Specialist, team 5th of 11 finalist teams, 9 of 17 vaults, he solved 4 (team's highest individual count).
+- Skipped by Julius: adding CSC331 as in-progress coursework, adding "Cryptography (CTF)" skill. Not added (no info/decision yet): Layer Run / Network Lab study games, virtual memory simulator as a planned project. PortalPal is intentionally NOT on the site (private repo).
+- Note: the first attempt this session lost the working copy and pushed nothing; redone from a fresh clone.
+
 ## To do (needs input from Julius)
 
 - [ ] **Privacy (CV + photo in git history):** `ME.JPG` is now stripped, but the old GPS version remains in git history. Decide whether to purge history (force push).
