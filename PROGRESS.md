@@ -97,9 +97,15 @@ Phase 3
 - Skipped by Julius: adding CSC331 as in-progress coursework, adding "Cryptography (CTF)" skill. Not added (no info/decision yet): Layer Run / Network Lab study games, virtual memory simulator as a planned project. PortalPal is intentionally NOT on the site (private repo).
 - Note: the first attempt this session lost the working copy and pushed nothing; redone from a fresh clone.
 
+### 2026-11-03 (eleventh session): git history purged
+- At Julius's request, rewrote the whole repo history (git filter-repo) to remove: the CV PDF (`public/cv/Julius-Kasanga-CV.pdf`), the old GPS-tagged `ME.JPG`, and the original GPS-tagged `src/assets/portrait.jpg`. Verified no image blob in history has GPS data and no commit contains the CV.
+- `ME.JPG` was re-added at HEAD as the metadata-stripped version. Force-pushed to `main`; every commit SHA changed. Old commits before this are not buildable (the old portrait.jpg is gone), which is fine.
+- Anyone with an old clone must re-clone (or `git fetch && git reset --hard origin/main`). GitHub may still serve the old commits by direct SHA link, via forks, or from cache until GitHub support purges them.
+- A local backup bundle existed only in the workspace's /tmp and is not kept.
+
 ## To do (needs input from Julius)
 
-- [ ] **Privacy (CV + photo in git history):** `ME.JPG` is now stripped, but the old GPS version remains in git history. Decide whether to purge history (force push).
+
 
 - [ ] **Projects:** only the portfolio itself is listed. Add 2-3 real projects (what it does, tech, repo/demo link, a screenshot if possible).
 - [ ] **Contact section:** two emails and two phone numbers are public in the source. Consider keeping one email plus LinkedIn/GitHub.
